@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>오늘의 모험섬</h1>
+<ul>
+    {% for key,value in template_island_dict | dictsort %}
+    <li><h3>{{ key }}</h3>
+    <h4>{{ value }}</h4></li>
+    {% endfor %}
+</ul>
+{% endblock %}
